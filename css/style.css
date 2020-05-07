@@ -1,0 +1,244 @@
+.wrapper {
+  /*border: 1px solid red;*/
+  width: 1000px;
+  margin: 0 auto; /*centrar el elemento*/
+  /*heredamos lo que teniamos antes con inherit*/
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "img1 img2 img3 " " img4 img5 img6 " " img7 img8 img9" ". img10 .";
+  grid-gap: 10px;
+}
+.item {
+  display: grid;
+  grid-template-rows: 250px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 20px;
+  padding: 20px;
+}
+.item:hover {
+  cursor: pointer;
+
+  background-color: rgb(255, 0, 0);
+  opacity: 0.4;
+}
+a {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+
+  color: #000;
+}
+a:hover {
+  color: #000;
+  font-size: 30px;
+}
+/*img1*/
+.item:nth-child(1) {
+  grid-area: img1;
+  background-image: url(../assets/img/htmlPractico.png);
+}
+/*img2*/
+.item:nth-child(2) {
+  grid-area: img2;
+  background-image: url(../assets/img/cssPractico.png);
+}
+/*img3*/
+.item:nth-child(3) {
+  grid-area: img3;
+  background-image: url(../assets//img/cssGridLayout.png);
+}
+/*img4*/
+.item:nth-child(4) {
+  grid-area: img4;
+  background-image: url(../assets/img/desarrolloWeb.png);
+}
+/*img5*/
+.item:nth-child(5) {
+  grid-area: img5;
+  background-image: url(../assets/img/bootstrap.png);
+}
+/*img6*/
+.item:nth-child(6) {
+  grid-area: img6;
+  background-image: url(../assets/img/javascritBasico.png);
+}
+/*img7*/
+.item:nth-child(7) {
+  grid-area: img7;
+  background-image: url(../assets/img/javaSE.png);
+}
+/*img8*/
+.item:nth-child(8) {
+  grid-area: img8;
+  background-image: url(../assets/img/aprendizajeOnline.png);
+}
+/*img9*/
+.item:nth-child(9) {
+  grid-area: img9;
+  background-image: url(../assets/img/trabajo.png);
+}
+/*img10*/
+.item:nth-child(10) {
+  grid-area: img10;
+  background-image: url(../assets/img/finanzas.png);
+}
+/*Modal*/
+.fondo-modal {
+  display: none; /*Oculta el modal hasta que cuando se presione el btn aparezca*/
+  /*background-color: rgba(0, 0, 0, 0.4);*/
+  background-color: rgba(0, 0, 0, 0.452);
+  z-index: 5; /*entre mas grande sea el numero mayor prioridad tiene*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.close {
+  color: #000;
+  position: absolute;
+  right: 300px;
+  margin: 0;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+.close:hover {
+  cursor: pointer;
+  color: #000;
+}
+.contenidoModal1 {
+  border-radius: 10px;
+  overflow: hidden; /*oculta las esquinas de la imagen*/
+  background-color: #fff;
+  margin: 0 auto;
+  width: 750px;
+  height: 600px;
+  background-image: url(../assets/img/htmlPractico.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contenidoModal2 {
+  border-radius: 10px;
+  overflow: hidden; /*oculta las esquinas de la imagen*/
+  background-color: #fff;
+  width: 750px;
+  height: 600px;
+  margin: 0 auto;
+  background-image: url(../assets/img/cssPractico.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contenidoModal3 {
+  border-radius: 10px;
+  overflow: hidden; /*oculta las esquinas de la imagen*/
+  background-color: #fff;
+  width: 750px;
+  height: 600px;
+  margin: 0 auto;
+  background-image: url(../assets/img/cssGridLayout.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contenidoModal4 {
+  border-radius: 10px;
+  overflow: hidden; /*oculta las esquinas de la imagen*/
+  background-color: #fff;
+  width: 750px;
+  height: 600px;
+  margin: 0 auto;
+  background-image: url(../assets/img/desarrolloWeb.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contenidoModal5 {
+  border-radius: 10px;
+  overflow: hidden; /*oculta las esquinas de la imagen*/
+  background-color: #fff;
+  width: 750px;
+  height: 600px;
+  margin: 0 auto;
+  background-image: url(../assets/img/bootstrap.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contenidoModal6 {
+  border-radius: 10px;
+  overflow: hidden; /*oculta las esquinas de la imagen*/
+  background-color: #fff;
+  width: 750px;
+  height: 600px;
+  margin: 0 auto;
+  background-image: url(../assets/img/javascritBasico.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contenidoModal7 {
+  border-radius: 10px;
+  overflow: hidden; /*oculta las esquinas de la imagen*/
+  background-color: #fff;
+  width: 750px;
+  height: 600px;
+  margin: 0 auto;
+  background-image: url(../assets/img/javaSE.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contenidoModal8 {
+  border-radius: 10px;
+  overflow: hidden; /*oculta las esquinas de la imagen*/
+  background-color: #fff;
+  width: 750px;
+  height: 600px;
+  margin: 0 auto;
+  background-image: url(../assets/img/aprendizajeOnline.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contenidoModal9 {
+  border-radius: 10px;
+  overflow: hidden; /*oculta las esquinas de la imagen*/
+  background-color: #fff;
+  width: 750px;
+  height: 600px;
+  margin: 0 auto;
+  background-image: url(../assets/img/trabajo.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contenidoModal10 {
+  border-radius: 10px;
+  overflow: hidden; /*oculta las esquinas de la imagen*/
+  background-color: #fff;
+  width: 750px;
+  height: 600px;
+  margin: 0 auto;
+  background-image: url(../assets/img/finanzas.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
